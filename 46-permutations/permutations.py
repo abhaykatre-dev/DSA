@@ -1,6 +1,6 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        
+        #TC - O(N.N!)
         result=[]
         used=[False]*len(nums)
 
@@ -32,4 +32,4 @@ class Solution:
         #         backTrack(path)
         #         path.pop()
         # backTrack([])
-        # return result     #TC - O(N.N!)
+        # return result    
