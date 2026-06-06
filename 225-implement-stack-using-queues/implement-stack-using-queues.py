@@ -10,12 +10,12 @@ class MyStack:
 
     def pop(self) -> int:
         if len(self.queue)==0:
-            return
+            return None
         return self.queue.popleft()
 
     def top(self) -> int:
         if len(self.queue)==0:
-            return
+            return None
         return self.queue[0]
 
     def empty(self) -> bool:
