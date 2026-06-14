@@ -19,5 +19,3 @@ class Solution:
                 return -1
             return 1+max(LH,RH)
         return func(root)!=-1
-
-        return func(root,True)
