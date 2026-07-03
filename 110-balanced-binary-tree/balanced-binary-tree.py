@@ -6,16 +6,16 @@
 #         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        def func(node):
+        def balanced(node):
             if node is None:
                 return 0
-            LH=func(node.left)
+            LH=balanced(node.left)
             if LH==-1:
                 return -1
-            RH=func(node.right)
+            RH=balanced(node.right)
             if RH==-1:
                 return -1
             if abs(LH-RH)>1:
                 return -1
             return 1+max(LH,RH)
-        return func(root)!=-1
+        return balanced(root)!=-1
