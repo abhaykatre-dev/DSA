@@ -1,12 +1,12 @@
 class Solution:
     def sumAndMultiply(self, n: int) -> int:
-        sum=0
-        res=0
+        digit_sum=0
+        digits=[]
         while n>0:
             LD=n%10
             if LD!=0:
-                res=res*10+LD
-                sum+=LD
+                digits.append(str(LD))
+                digit_sum+=LD
             n=n//10
-        res=int(str(res)[::-1])
-        return res*sum 
+        num=int("".join(digits[::-1])) if digits else 0
+        return num*digit_sum 
