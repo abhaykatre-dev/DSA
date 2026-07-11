@@ -27,6 +27,3 @@ class Solution:
                 if edge_count==nodes*(nodes-1)//2:
                     ans+=1
         return ans
-
-
-        return cnt
