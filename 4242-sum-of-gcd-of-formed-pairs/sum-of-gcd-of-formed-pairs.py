@@ -12,10 +12,10 @@ class Solution:
             prefixGcd.append(gcd(num,maxi))
         prefixGcd.sort()
         l,r=0,len(prefixGcd)-1
-        sum=0
+        ans=0
         while l<r:
-            sum+=gcd(prefixGcd[l],prefixGcd[r])
+            ans+=gcd(prefixGcd[l],prefixGcd[r])
             l+=1
             r-=1
-        return sum
+        return ans
             
