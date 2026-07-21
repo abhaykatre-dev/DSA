@@ -1,11 +1,11 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
         depth=0
-        stack=[]
+        curr=0
         for ch in s:
             if ch=="(":
-                stack.append(ch)
+                curr+=1
             elif ch==")":
-                stack.pop()
-            depth=max(depth,len(stack))
+                curr-=1
+            depth=max(depth,curr)
         return depth
