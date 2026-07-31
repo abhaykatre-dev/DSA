@@ -6,7 +6,4 @@ class Solution:
             freq[num]=freq.get(num,0)+1
             if freq[num]==n//2:
                 return num
-        # for num in freq:
-        #     if freq[num]==n//2:
-        #         return num
-        
+    
