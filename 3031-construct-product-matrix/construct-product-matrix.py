@@ -1,0 +1,18 @@
+class Solution:
+    def constructProductMatrix(self, grid: List[List[int]]) -> List[List[int]]:
+        MOD=12345
+        n=len(grid)
+        m=len(grid[0])
+        p=[[0 for _ in range(m)] for _ in range(n)]
+        prefix=1
+        for i in range(n):
+            for j in range(m):
+                p[i][j]=prefix
+                prefix=(prefix*grid[i][j])%MOD
+        suffix=1
+        for i in range(n-1,-1,-1):
+            for j in range(m-1,-1,-1):
+                p[i][j]=(suffix*p[i][j])%MOD
+                suffix=(suffix*grid[i][j])%MOD
+        return p
+                
